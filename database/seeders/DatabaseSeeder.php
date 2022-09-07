@@ -39,13 +39,46 @@ class DatabaseSeeder extends Seeder
     }
 
      public function CargaUser(){
-        $user = new User();
-        $user->nombre_usuario = 'cristhian22';
-        $user->correo_electronico = 'osvaldo.marvin@example.net';
-        $user->password =  '$2y$10$92IXUNpkjO0rOQ5byMi.Ye4oKoEa3Ro9llC/.og/at2.uheWG/igi'; // password
-        $user->remember_token =  Str::random(10);
-      //  $user->fecha_cambio_contra = date('Y-m-d');
-        $user->save();
+      $user = new User();
+      $user->nombre_usuario = 'cristhian22';
+      $user->correo_electronico = 'osvaldo.marvin@example.net';
+      $user->password =  '$2y$10$92IXUNpkjO0rOQ5byMi.Ye4oKoEa3Ro9llC/.og/at2.uheWG/igi'; // password
+      $user->remember_token =  Str::random(10);
+    //  $user->fecha_cambio_contra = date('Y-m-d');
+      $user->save();
+
+
+      $user = new User();
+      $user->nombre_usuario = 'Guido Salazar';
+      $user->correo_electronico = 'guidosalazar@example.net';
+      $user->password =  '$2y$10$92IXUNpkjO0rOQ5byMi.Ye4oKoEa3Ro9llC/.og/at2.uheWG/igi'; // password
+      $user->remember_token =  Str::random(10);
+    //  $user->fecha_cambio_contra = date('Y-m-d');
+      $user->save();
+
+      $user = new User();
+      $user->nombre_usuario = 'Kulico Suarez';
+      $user->correo_electronico = 'julicosuarez@example.net';
+      $user->password =  '$2y$10$92IXUNpkjO0rOQ5byMi.Ye4oKoEa3Ro9llC/.og/at2.uheWG/igi'; // password
+      $user->remember_token =  Str::random(10);
+    //  $user->fecha_cambio_contra = date('Y-m-d');
+      $user->save();
+
+      $user = new User();
+      $user->nombre_usuario = 'Emanuel Vaca';
+      $user->correo_electronico = 'emanuelvaca@example.net';
+      $user->password =  '$2y$10$92IXUNpkjO0rOQ5byMi.Ye4oKoEa3Ro9llC/.og/at2.uheWG/igi'; // password
+      $user->remember_token =  Str::random(10);
+    //  $user->fecha_cambio_contra = date('Y-m-d');
+      $user->save();
+
+      $user = new User();
+      $user->nombre_usuario = 'Oni Moron';
+      $user->correo_electronico = 'onimoronr@example.net';
+      $user->password =  '$2y$10$92IXUNpkjO0rOQ5byMi.Ye4oKoEa3Ro9llC/.og/at2.uheWG/igi'; // password
+      $user->remember_token =  Str::random(10);
+    //  $user->fecha_cambio_contra = date('Y-m-d');
+      $user->save();
      }
 
      public function cargarDatosPruebas(){
