@@ -1,7 +1,7 @@
 {{-- @extends('navegador')
 
 @section('Contenido')
-    <h1> Julio SE LA COMEE!!!!!!!!</h1>
+    <h1> Cuellar SE LA COMEE!!!!!!!!</h1>
     <br>
     <a href="{{Route('Login')}}"> Inicio Seccion</a>
 @endsection --}}

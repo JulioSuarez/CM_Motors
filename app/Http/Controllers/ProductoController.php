@@ -46,7 +46,7 @@ class ProductoController extends Controller
      */
     public function store(Request $r)
     {
-        dd('llegue!!');
+       // dd('llegue!!');
 
         $p = new Producto();
         $p->cod_oem = $r->cod_oem ;

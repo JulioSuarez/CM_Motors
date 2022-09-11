@@ -8,6 +8,7 @@ use App\Models\DetalleVenta;
 use App\Models\Empleado;
 use App\Models\Producto;
 use App\Models\Cliente;
+use App\Events\DisminuirProductosEvent;
 
 use Illuminate\Support\Facades\Auth;
 
@@ -32,14 +33,17 @@ class VentasController extends Controller
      */
     public function create()
     {
-       // dd('Holaa');
+
+        event(new DisminuirProductosEvent(9001,5));
+
+     dd('realizado');
         $clientes = Cliente::get();
         $user = Auth::user()->id;
      //   dd($user);
         $empleado = Empleado::join('users','users.id','=',
         'empleados.id_usuario')->select('empleados.*','users.nombre_usuario')
         ->where('id_usuario',$user)->first();
-  
+
         return view('VistaVentas.create',compact('clientes','empleado'));
     }
 
@@ -51,6 +55,9 @@ class VentasController extends Controller
      */
     public function store(Request $request)
     {
+
+
+
         $r = new Venta();
         $r->id = 501;
         $r->monto_total = 120;

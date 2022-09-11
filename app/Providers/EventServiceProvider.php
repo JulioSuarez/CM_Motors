@@ -7,6 +7,10 @@ use Illuminate\Auth\Listeners\SendEmailVerificationNotification;
 use Illuminate\Foundation\Support\Providers\EventServiceProvider as ServiceProvider;
 use Illuminate\Support\Facades\Event;
 
+//importar el evento para disminuir productos
+use App\Events\DisminuirProductosEvent;
+use App\Listeners\DisminuirProductosListener;
+
 class EventServiceProvider extends ServiceProvider
 {
     /**
@@ -18,6 +22,11 @@ class EventServiceProvider extends ServiceProvider
         Registered::class => [
             SendEmailVerificationNotification::class,
         ],
+
+        //evetnos para dismiunir
+        DisminuirProductosEvent::class =>[
+            DisminuirProductosListener::class,
+        ]
     ];
 
     /**
